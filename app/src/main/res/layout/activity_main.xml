@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yff.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#cccccc"
+        android:textSize="23sp"
+        android:text="这是标题栏" />
+
+
+
+    <com.yff.MyScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textSize="23sp"
+                    android:text="这是上部背景图"
+                    android:background="#11ee"
+                    />
+
+
+                <include
+                    android:id="@+id/top_view"
+                    layout="@layout/top_layout"/>
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.yff.LinearLayoutForListView
+                    android:id="@+id/linearForList"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/float_view"
+                layout="@layout/top_layout"/>
+
+
+        </FrameLayout>
+
+
+
+    </com.yff.MyScrollView>
+</LinearLayout>

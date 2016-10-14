@@ -59,15 +59,6 @@ public class MainActivity extends AppCompatActivity implements MyScrollView.OnSc
             Log.i("pos",listData[i]);
         }
 
-//        ArrayAdapter<String> adapter=new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,listData);
-//        liearForList.setAdapter(adapter);
-//        liearForList.setOnItemClickListener(new LinearLayoutForListView.setOnItemClickListener() {
-//            @Override
-//            public void onItemClick(View v, Object obj, int position) {
-//                Toast.makeText(MainActivity.this,position+"位",Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
         MyAdapter myAdapter=new MyAdapter(this,listData);
         liearForList.setAdapter(myAdapter);
 
